@@ -24,13 +24,8 @@ public class Ball : MonoBehaviour
             LockBallToPaddle();
             LaunchOnMouseClick();
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.name == paddle.name)
         GetComponent<SpriteRenderer>().color = paddle.GetComponent<SpriteRenderer>().color;
-        Debug.Log(collision.name);
     }
 
     /// <summary>

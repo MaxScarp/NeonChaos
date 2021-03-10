@@ -6,6 +6,16 @@ public class Brick : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        Color brickColor = GetComponent<SpriteRenderer>().color;
+        Color ballColor = collision.collider.GetComponent<SpriteRenderer>().color;
+
+        if ( gameObject.name == "Special Brick")
+        {
+            Destroy(gameObject);
+        }
+        else if( ballColor == brickColor)
+        {
+            Destroy(gameObject);
+        }
     }
 }
