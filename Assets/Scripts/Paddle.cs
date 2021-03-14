@@ -7,8 +7,18 @@ public class Paddle : MonoBehaviour
     [SerializeField] float minX = 0.05f;
     [SerializeField] float maxX = 14.0f;
     [SerializeField] Color[] colors;
+    //[SerializeField] AudioClip[] audioTracks;
 
+    //state
     int index = 0;
+
+    //Cached component references
+    //AudioSource myAudioSource;
+
+    /*void Start()
+    {
+        myAudioSource = GetComponent<AudioSource>();
+    }*/
 
     void Update()
     {
@@ -19,6 +29,12 @@ public class Paddle : MonoBehaviour
             ColorChange();
         }
     }
+
+    /*void Awake()
+    {
+        AudioClip clip = audioTracks[Random.Range(0, audioTracks.Length)];
+        myAudioSource.PlayOneShot(clip);
+    }*/
 
     /// <summary>
     /// Recupera la posizione del paddle in base a dove si trova il mouse.
@@ -52,5 +68,5 @@ public class Paddle : MonoBehaviour
         float mousePositionX = Input.mousePosition.x / Screen.width * cameraWidth;
 
         return mousePositionX;
-    } 
+    }
 }

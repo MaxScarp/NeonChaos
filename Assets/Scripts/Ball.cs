@@ -8,12 +8,18 @@ public class Ball : MonoBehaviour
     [SerializeField] Paddle paddle;
     [SerializeField] float launchX = 1.0f;
     [SerializeField] float launchY = 15.0f;
+    [SerializeField] AudioClip[] soundtracks;
 
     Vector2 paddleToBallVector;
     bool hasStarted = false; //Segnala quando la palla è stata lanciata
+    bool musicHasStarted = false; //Segnala quando la musica è partita
+
+    //Cached component references
+    AudioSource myAudioSource;
 
     void Start()
     {
+        myAudioSource = GetComponent<AudioSource>();
         paddleToBallVector = transform.position - paddle.transform.position;
     }
 
@@ -24,8 +30,22 @@ public class Ball : MonoBehaviour
             LockBallToPaddle();
             LaunchOnMouseClick();
         }
+        if(hasStarted && !musicHasStarted)
+        {
+            PlayMusic();
+        }
 
         GetComponent<SpriteRenderer>().color = paddle.GetComponent<SpriteRenderer>().color;
+    }
+
+    /// <summary>
+    /// Fa partire la musica del gioco quando la pallina viene lanciata.
+    /// </summary>
+    private void PlayMusic()
+    {
+        AudioClip clip = soundtracks[UnityEngine.Random.Range(0, soundtracks.Length)];
+        myAudioSource.PlayOneShot(clip);
+        musicHasStarted = true;
     }
 
     /// <summary>
