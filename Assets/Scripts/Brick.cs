@@ -8,10 +8,13 @@ public class Brick : MonoBehaviour
 
     //Cached reference
     Level level;
+    GameStatus gameStatus;
 
     void Start()
     {
         level = FindObjectOfType<Level>();
+        gameStatus = FindObjectOfType<GameStatus>();
+
         level.CountBreakableBricks();
     }
 
@@ -22,10 +25,12 @@ public class Brick : MonoBehaviour
 
         if ( gameObject.name == "Special Brick")
         {
+            gameStatus.AddToScoreSpecial();
             DestroyBrick();
         }
         else if( ballColor == brickColor)
         {
+            gameStatus.AddToScore();
             DestroyBrick();
         }
     }
