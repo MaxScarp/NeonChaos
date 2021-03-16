@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: e226c7e23a703714ea90f5e88c6f2dfd, type: 3}
+  brickSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!114 &-7728119259573038417
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,7 +48,6 @@ public class GameStatus : MonoBehaviour
 
     public void ResetGame()
     {
-        Don
         Destroy(gameObject);
         score = 0;
     }

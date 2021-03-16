@@ -5,6 +5,7 @@ using UnityEngine;
 public class Brick : MonoBehaviour
 {
     [SerializeField] AudioClip breakSound;
+    [SerializeField] GameObject brickSparklesVFX;
 
     //Cached reference
     Level level;
@@ -38,6 +39,7 @@ public class Brick : MonoBehaviour
     private void DestroyBrick()
     {
         PlaySound();
+        TriggerSparklesVFX();
         Destroy(gameObject);
         level.BrickDestroyed();
     }
@@ -45,5 +47,11 @@ public class Brick : MonoBehaviour
     private void PlaySound()
     {
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+    }
+
+    private void TriggerSparklesVFX()
+    {
+        GameObject sparkles = Instantiate(brickSparklesVFX, transform.position, transform.rotation);
+        Destroy(sparkles, 1f);
     }
 }
