@@ -12,6 +12,19 @@ public class GameStatus : MonoBehaviour
 
     [SerializeField] int score = 0; //Serialized for debugging purposes
 
+    void Awake()
+    {
+        int countGameStatus = FindObjectsOfType<GameStatus>().Length;
+        if(countGameStatus > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void Start()
     {
         scoreText.text = score.ToString();
@@ -31,5 +44,12 @@ public class GameStatus : MonoBehaviour
     {
         score += pointPerSpecialBrickDestroyed;
         scoreText.text = score.ToString();
+    }
+
+    public void ResetGame()
+    {
+        Don
+        Destroy(gameObject);
+        score = 0;
     }
 }

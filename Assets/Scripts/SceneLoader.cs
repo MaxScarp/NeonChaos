@@ -5,12 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    //Chached references
+    GameStatus gameStatus;
+
+    void Start()
+    {
+        gameStatus = FindObjectOfType<GameStatus>();
+    }
+
     /// <summary>
     /// Carica la scena di partenza del gioco.
     /// </summary>
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+        gameStatus.ResetGame();
     }
 
     /// <summary>
