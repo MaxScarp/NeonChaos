@@ -8242,6 +8242,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 327988927536351898, guid: f4e7259a20e763d4681f68d764e61654, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e7259a20e763d4681f68d764e61654, type: 3}
 --- !u!1001 &1177618163313721102
@@ -8563,6 +8567,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5590374365605223999, guid: 23dcef3d2b60f4248a3c058c4f712551, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5590374366346016559, guid: 23dcef3d2b60f4248a3c058c4f712551, type: 3}
       propertyPath: m_Size.y
       value: 14
@@ -8594,7 +8602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5770194883922168508, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.14
+      value: 0.818
       objectReference: {fileID: 0}
     - target: {fileID: 5770194883922168508, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8636,6 +8644,34 @@ PrefabInstance:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 832930724}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 11480e8d30266fb488b1c3efcfd62262, type: 3}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 50b99c1608d33f042b506943b8772801, type: 3}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ec085091e32db744b0eab6dda1bf178, type: 3}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cdf226b4a3a4e604d87b4e6d8fe9eab8, type: 3}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6602af47d439a3745887f4ba24490d57, type: 3}
+    - target: {fileID: 5770194883922168511, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
+      propertyPath: soundtracks.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6da338cc614d5b941846b6207454a3d2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
 --- !u!1001 &8395382058094441781

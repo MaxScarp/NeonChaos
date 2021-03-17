@@ -139,13 +139,9 @@ MonoBehaviour:
   launchX: 3
   launchY: 13.5
   soundtracks:
-  - {fileID: 8300000, guid: b00a854ba231a5248ab46519d8f785ff, type: 3}
   - {fileID: 8300000, guid: 11480e8d30266fb488b1c3efcfd62262, type: 3}
-  - {fileID: 8300000, guid: 3cef9bb22feca60448c0fe95fe09e515, type: 3}
   - {fileID: 8300000, guid: 50b99c1608d33f042b506943b8772801, type: 3}
-  - {fileID: 8300000, guid: 8f4cfd4355571254fa930c4bab836a6c, type: 3}
   - {fileID: 8300000, guid: 8ec085091e32db744b0eab6dda1bf178, type: 3}
-  - {fileID: 8300000, guid: fa1fa421f4a4b1840b1448717526c6c8, type: 3}
   - {fileID: 8300000, guid: cdf226b4a3a4e604d87b4e6d8fe9eab8, type: 3}
   - {fileID: 8300000, guid: 6602af47d439a3745887f4ba24490d57, type: 3}
   - {fileID: 8300000, guid: 6da338cc614d5b941846b6207454a3d2, type: 3}

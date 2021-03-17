@@ -60,20 +60,8 @@ public class Paddle : MonoBehaviour
     {
         float aspectRatio = Screen.width / Screen.height;
         float cameraWidth = Camera.main.orthographicSize * 2 * aspectRatio;
-        float mousePositionX = GetXPos() / Screen.width * cameraWidth;
+        float mousePositionX = Input.mousePosition.x / Screen.width * cameraWidth;
 
         return mousePositionX;
-    }
-
-    private float GetXPos()
-    {
-        if(gameStatus.GetAutoplay())
-        {
-            return ball.transform.position.x;
-        }
-        else
-        {
-            return Input.mousePosition.x;
-        }
     }
 }
