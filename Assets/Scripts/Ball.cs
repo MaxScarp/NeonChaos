@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -9,6 +6,7 @@ public class Ball : MonoBehaviour
     [SerializeField] float launchX = 1.0f;
     [SerializeField] float launchY = 15.0f;
     [SerializeField] AudioClip[] soundtracks;
+    [SerializeField] float randomFactor = 0.2f;
 
     Vector2 paddleToBallVector;
     bool hasStarted = false; //Segnala quando la palla è stata lanciata
@@ -16,10 +14,12 @@ public class Ball : MonoBehaviour
 
     //Cached component references
     AudioSource myAudioSource;
+    Rigidbody2D myRigidBody2d;
 
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
+        myRigidBody2d = GetComponent<Rigidbody2D>();
         paddleToBallVector = transform.position - paddle.transform.position;
     }
 
@@ -55,7 +55,7 @@ public class Ball : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(launchX, launchY);
+            myRigidBody2d.velocity = new Vector2(launchX, launchY);
             hasStarted = true;
         }
     }
@@ -67,5 +67,11 @@ public class Ball : MonoBehaviour
     {
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + paddleToBallVector;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 velocityTweak = new Vector2(Random.Range(0f, randomFactor), Random.Range(0f, randomFactor));
+        myRigidBody2d.velocity += velocityTweak;
     }
 }

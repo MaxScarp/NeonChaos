@@ -7,7 +7,6 @@ public class Brick : MonoBehaviour
 {
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject brickSparklesVFX;
-    [SerializeField] int maxHits;
     [SerializeField] Sprite[] hitSprites;
 
     //Cached reference
@@ -57,6 +56,7 @@ public class Brick : MonoBehaviour
     private void HandleHit()
     {
         timesHit++;
+        int maxHits = hitSprites.Length + 1;
         if (timesHit >= maxHits)
         {
             gameStatus.AddToScoreSpecial();

@@ -1912,6 +1912,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1177618161467210172, guid: c4edf455f37c4294e828e728ee71a33a, type: 3}
+      propertyPath: autoplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177618161467210172, guid: c4edf455f37c4294e828e728ee71a33a, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 465317810}
@@ -2988,11 +2992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5770194883922168508, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8
+      value: 1.21
       objectReference: {fileID: 0}
     - target: {fileID: 5770194883922168508, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: 0.657
       objectReference: {fileID: 0}
     - target: {fileID: 5770194883922168508, guid: 738c2072b93ec6f4bbc908a1b6c98030, type: 3}
       propertyPath: m_LocalPosition.z
